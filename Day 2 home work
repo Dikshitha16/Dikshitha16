@@ -1,0 +1,85 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner input = new Scanner(System.in);
+        int hour = input.nextInt();
+        
+            if(hour <12)
+                System.out.println("good morning");
+                
+            else if(hour >=12 && hour <=16)
+                System.out.println("good afternoon");
+                
+             else if(hour >=16 && hour <=20)
+                System.out.println("good evening");
+                
+            else if(hour >20 && hour <=24)
+                System.out.println("good night");
+                
+            
+            else
+                System.out.println("invalid input");
+                
+            }
+        
+    }
+
+
+
+
+
+import java.util.*;
+class Student
+{
+ int rollno,physics,chem,math;
+ String name,email;
+ public static void main(String...args)
+ {
+  Student s1=new Student();
+  Scanner sc=new Scanner(System.in);
+  System.out.print("Roll no. : ");
+  s1.rollno=sc.nextInt();
+  System.out.print("Name : ");
+  s1.name=sc.next();
+  System.out.print("Email : ");
+  s1.email=sc.next();
+  System.out.println("Enter the Marks following...");
+  System.out.print("Physics : ");
+  s1.physics=sc.nextInt();
+  System.out.print("Chemistry : ");
+  s1.chem=sc.nextInt();
+  System.out.print("Math : ");
+  s1.math=sc.nextInt();
+  
+  int total=s1.physics+s1.chem+s1.math;
+  
+  int avg=(total*100)/300;
+  
+  String grade;
+  if(avg<33)
+  {
+   grade="Fail";
+  }
+  else if ( avg >=34 && avg <= 44 )
+  {
+   grade="III";
+  }
+  else if ( avg >= 45 && avg <= 59 )
+  {
+   grade="II";
+  }
+  else if ( avg >=60 && avg <= 74 )
+  {
+   grade="I";
+  }
+  else
+  {
+   grade="Distinction";
+  }
